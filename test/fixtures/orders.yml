@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  shipping_id: 1
+  shipping_fee: 1
+  commision_fee: 1
+  packing_fee: 1
+  status_id: 1
+  order_number: MyString
+
+two:
+  shipping_id: 1
+  shipping_fee: 1
+  commision_fee: 1
+  packing_fee: 1
+  status_id: 1
+  order_number: MyString
