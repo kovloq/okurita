@@ -11,7 +11,7 @@ Rails.application.configure do
   config.reload_classes_only_on_change = false
   # Show full error reports.
   config.consider_all_requests_local = true
-
+  config.assets.compile = true
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
   if Rails.root.join('tmp', 'caching-dev.txt').exist?
