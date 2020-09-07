@@ -10,8 +10,8 @@ default: &default
   reconnect: false
   database: okurita
   pool: 5
-  username: user
-  password: 12345678
+  username: root
+  password: root
   host: localhost
 
 development:

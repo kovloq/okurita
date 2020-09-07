@@ -1,0 +1,28 @@
+<%= form_for @user,url: {action: "create"} do |f| %>
+	<div class="form-body">
+	  <div class="form-group">
+		<label for="title" >Name</label>
+		<%= text_field(:user, :name,class:"form-control",placeholder:"name") %>
+	  </div>
+	  <div class="form-group">
+		<label for="title" >Email</label>
+		<%= text_field(:user, :email,class:"form-control",placeholder:"email@example.com") %>
+	  </div>
+	  <div class="form-group">
+		<label for="title" >Password</label>
+		<%= text_field(:password, :password,class:"form-control",placeholder:"") %>
+	  </div>
+	  <div class="form-group">
+		<label for="title" >Country</label>
+		<%= f.select(:country_id, @country.collect {|c| [c.name, c.id] }) %>
+	  </div>
+	  <div class="form-group">
+		<label for="title" >Newsletetr</label>
+	  	<%= check_box_tag(:is_newsletter) %>
+	  </div>
+	  <div class="form-actions">
+	  	<input type="submit" class="btn green" value="Add"> 
+	  	<a href="#" class="btn back-cancel default">Cancel</a>
+	  </div>
+	</div>
+<% end %>

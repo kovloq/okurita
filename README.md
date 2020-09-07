@@ -22,3 +22,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+Run rails in vagrant
+bundle exec rails server -b 0.0.0.0 -e development
