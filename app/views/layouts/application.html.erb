@@ -29,14 +29,23 @@
       <!-- Page Header Start-->
       <div class="page-main-header">
         <div class="main-header-right row m-0">
+          <form>
+            
+          </form>
           <div class="main-header-left">
-            <div class="logo-wrapper"><a href="index.html"><img class="img-fluid" src="../assets/images/logo/logo.png" alt=""></a></div>
+            <div class="logo-wrapper"><a href="index.html">
+              <%= image_tag("/assets/images/logo.png", class: "img-fluid") %>
+              
+            </a></div>
             <div class="toggle-sidebar"><i class="status_toggle middle" data-feather="grid" id="sidebar-toggle"> </i></div>
+          </div>
+          <div class="left-menu-header col horizontal-wrapper pl-0">
           </div>
           <div class="nav-right col-8 pull-right right-menu">
             <ul class="nav-menus">
               <li class="profile-nav onhover-dropdown p-0">
-                <div class="media profile-media"><img class="b-r-10" src="../assets/images/dashboard/profile.jpg" alt="">
+                <div class="media profile-media">
+                  <%= image_tag("/assets/images/profile.jpg", class: "b-r-10") %>
                   <div class="media-body"><span>Emay Walter</span>
                     <p class="mb-0 font-roboto">Admin <i class="middle fa fa-angle-down"></i></p>
                   </div>
@@ -54,8 +63,8 @@
         <!-- Page Sidebar Start-->
         <header class="main-nav">
           <div class="logo-wrapper"><a href="index.html">
-            <img class="img-fluid for-light" src="../assets/images/logo/logo.png" alt="Logo">
-            <img class="img-fluid for-dark" src="../assets/images/logo/logo_dark.png" alt="Logo"></a>
+            <%= image_tag("/assets/images/logo.png", class: "img-fluid for-light", alt:"Logo") %>
+            <%= image_tag("/assets/images/logo_dark.png", class: "img-fluid for-dark", alt:"Logo") %>
             <div class="back-btn"><i class="fa fa-angle-left"></i></div>
             <div class="toggle-sidebar">
               <i class="status_toggle middle" data-feather="grid" id="sidebar-toggle"> </i>
@@ -63,17 +72,17 @@
           </div>
           <div class="logo-icon-wrapper">
             <a href="index.html">
-              <img class="img-fluid" src="../assets/images/logo/logo-icon.png" alt="">
+              <%= image_tag("/assets/images/logo-icon.png", class: "img-fluid") %>
             </a>
           </div>
           <nav>
             <div class="main-navbar">
               <div class="left-arrow" id="left-arrow"><i data-feather="arrow-left"></i></div>
-              <div id="mainnav">
+              <div id="mainnav"><%= controller.controller_name %>
                 <ul class="nav-menu custom-scrollbar">
                   <li class="back-btn">
                     <a href="index.html">
-                      <img class="img-fluid" src="../assets/images/logo/logo-icon.png" alt="Logo">
+                      <%= image_tag("/assets/images/logo-icon.png", class: "img-fluid", alt:"Log") %>
                     </a>
                     <div class="mobile-back text-right"><span>Back</span>
                       <i class="fa fa-angle-right pl-2" aria-hidden="true"></i>
@@ -83,6 +92,42 @@
                     <a class="nav-link menu-title link-nav" href="file-manager.html"><i data-feather="git-pull-request"> </i><span>Dashboard</span>
                     </a>
                   </li>
+                  <li class="dropdown">
+                  <%= link_to admin_users_path, class: "nav-link menu-title link-nav #{controller.controller_name=="users" ? "active" : ""}" do %>
+                    </i><span>User</span>
+                  <% end %> 
+                  </li>
+                  <li class="dropdown">
+                  <%= link_to admin_orders_path, class: "nav-link menu-title link-nav #{controller.controller_name=="orders" ? "active" : ""}" do %>
+                    </i><span>Order</span>
+                  <% end %> 
+                  </li>
+                  <li class="dropdown">
+                  <%= link_to admin_faqs_path, class: "nav-link menu-title link-nav #{controller.controller_name=="faqs" ? "active" : ""}" do %>
+                    </i><span>FAQ</span>
+                  <% end %> 
+                  </li>
+                  <li class="dropdown">
+                  <%= link_to admin_categories_path, class: "nav-link menu-title link-nav #{controller.controller_name=="categories" ? "active" : ""}" do %>
+                    </i><span>Categories</span>
+                  <% end %> 
+                  </li>
+                  <li class="dropdown">
+                  <%= link_to admin_news_index_path, class: "nav-link menu-title link-nav #{controller.controller_name=="news" ? "active" : ""}" do %>
+                    </i><span>News</span>
+                  <% end %> 
+                  </li>
+                  <li class="dropdown">
+                  <%= link_to admin_refunds_path, class: "nav-link menu-title link-nav #{controller.controller_name=="refunds" ? "active" : ""}" do %>
+                    </i><span>Refund</span>
+                  <% end %> 
+                  </li>
+                  <li class="dropdown">
+                  <%= link_to admin_deposits_path, class: "nav-link menu-title link-nav #{controller.controller_name=="deposits" ? "active" : ""}" do %>
+                    </i><span>Deposit</span>
+                  <% end %> 
+                  </li>
+                  
                 </ul>
               </div>
               <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>

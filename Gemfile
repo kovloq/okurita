@@ -10,8 +10,7 @@ gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 # gem 'sqlite3', '~> 1.4'
 gem "mysql2"
 gem "carrierwave"
-# Use Puma as the app server
-gem 'puma', '~> 4.1'
+gem 'thin'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
@@ -47,6 +46,8 @@ group :development do
 end
 
 group :test do
+  # Use Puma as the app server
+  gem 'puma', '~> 4.1'
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'

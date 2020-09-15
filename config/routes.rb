@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   # 
   namespace :admin do
 		resources :users
+		# resources :contents
 		resources :orders
+		resources :categories
 		resources :products
 		resources :news
 		resources :faqs
