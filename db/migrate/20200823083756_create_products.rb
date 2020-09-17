@@ -8,9 +8,10 @@ class CreateProducts < ActiveRecord::Migration[6.0]
       t.integer :price
       t.text :description
       t.boolean :is_preorder
-
+      t.bigint :category_id, index:true
       t.timestamps
     end
     add_foreign_key :products, :shops
+    add_foreign_key :products, :categories
   end
 end

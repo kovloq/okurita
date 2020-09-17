@@ -89,8 +89,9 @@
                     </div>
                   </li>
                   <li class="dropdown">
-                    <a class="nav-link menu-title link-nav" href="file-manager.html"><i data-feather="git-pull-request"> </i><span>Dashboard</span>
-                    </a>
+                    <%= link_to admin_path, class: "nav-link menu-title link-nav #{controller.controller_name=="home" ? "active" : ""}" do %>
+                      </i><span>Dashboard</span>
+                    <% end %> 
                   </li>
                   <li class="dropdown">
                   <%= link_to admin_users_path, class: "nav-link menu-title link-nav #{controller.controller_name=="users" ? "active" : ""}" do %>

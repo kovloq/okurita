@@ -2,19 +2,15 @@
  
 <p>
   <b>Name:</b>
-  <%= @post.name %>
+  <%= @news.title %>
 </p>
  
 <p>
   <b>Title:</b>
-  <%= @post.title %>
-</p>
- 
-<p>
-  <b>Content:</b>
-  <%= @post.content %>
+  <%= @news.content %>
 </p>
  
  
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+ 
+<%= link_to 'Edit', edit_admin_news_path(@news) %> |
+<%= link_to 'Back', admin_news_path %>

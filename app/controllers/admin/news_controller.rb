@@ -13,7 +13,6 @@ class Admin::NewsController < ApplicationController
         if @news.save
           format.html { redirect_to admin_news_index_url, notice: 'News was successfully created.' }
         else
-          @country=Country.all
           format.html { render :new }
         end
       end
@@ -28,7 +27,7 @@ class Admin::NewsController < ApplicationController
   	end
 
   	def edit
-
+      @news = News.find(params[:id])
   	end
 
   	def update
@@ -43,7 +42,11 @@ class Admin::NewsController < ApplicationController
   	end
 
   	def destroy
-
+      News.find(params[:id]).destroy
+      respond_to do |format|
+        format.html { redirect_to admin_news_index_url, notice: 'News was successfully destroyed.' }
+        format.json { head :no_content }
+      end
   	end
 
     def news_params

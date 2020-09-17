@@ -1,0 +1,45 @@
+<div class="container-fluid">
+    <div class="page-header">
+        <div class="row">
+            <div class="col-6">
+                <h3>News</h3>
+                <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                	<%= link_to admin_path do %>
+                      <i data-feather="home"></i>
+                    <% end %>
+                </li>
+                <li class="breadcrumb-item">News</li>
+              </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+ 
+<div class="row">
+	<div class="col-sm-12">
+		<div class="card">
+			<div class="card-header">
+				<h5>News</h5>
+			</div>
+			<div class="card-body">
+				<%= form_for @news,url: {action: "update"},html: {class: "theme-form"} do |f| %>
+					<div class="form-group">
+						<label class="col-form-label pt-0" for="title">Title</label>
+						<%= f.text_field "title", class: 'form-control' %>
+					</div>
+					<div class="form-group">
+						<label class="col-form-label pt-0" for="title">Content</label>
+						<%= f.text_area "content",class: 'form-control' %>
+					</div>
+					<div class="card-footer">
+						<input type="submit" value="Submit" class="btn btn-primary"/>
+						<%= link_to "Cancel", admin_news_index_path, class: "btn btn-secondary" %>
+					</div>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>
+ 
