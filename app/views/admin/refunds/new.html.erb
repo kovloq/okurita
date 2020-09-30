@@ -1,0 +1,48 @@
+<div class="container-fluid">
+    <div class="page-header">
+        <div class="row">
+            <div class="col-6">
+                <h3>Refund</h3>
+                <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                	<a href="index.html"><i data-feather="home"></i></a>
+                </li>
+                <li class="breadcrumb-item">Refund</li>
+              </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+ 
+<div class="row">
+	<div class="col-sm-12">
+		<div class="card">
+			<div class="card-header">
+				<h5>Refund</h5>
+			</div>
+			<div class="card-body">
+				<%= form_for @refund,url: {action: "create"},html: {class: "theme-form"} do |f| %>
+                <div class="form-group">
+                    <label class="col-form-label pt-0" for="title">User</label>
+                    <%= f.select :user_id, @users.map{ |user| [user.name, user.id] }, {}, {class: 'form-control'} %>
+                    
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label pt-0" for="title">Amount</label>
+                    <%= f.text_field "amount", class: 'form-control' %>
+                </div>
+                <div class="form-check">
+                    <label>
+                    <%= f.radio_button :is_active, "1" %> Active </label>
+                    <label><%= f.radio_button :is_active, "0" %> Non Active</label>
+                </div>
+                <div class="card-footer">
+                    <input type="submit" value="Submit" class="btn btn-primary"/>
+                    <%= link_to "Cancel", admin_refunds_path, class: "btn btn-secondary" %>
+                </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>

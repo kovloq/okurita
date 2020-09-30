@@ -26,15 +26,15 @@
 	  </div>
 	  <div class="form-group">
 		<label for="title" >Country</label>
-		<%= f.select(:country_id, @country.collect {|c| [c.name, c.id] }) %>
+		<%= f.select(:country_id, @country.collect {|c| [c.name, c.id] }, {}, {class: 'form-control'}) %>
 	  </div>
 	  <div class="form-group">
 		<label for="title" >Newsletetr</label>
 	  	<%= check_box_tag(:is_newsletter) %>
 	  </div>
 	  <div class="form-actions">
-	  	<input type="submit" class="btn green" value="Add"> 
-	  	<a href="#" class="btn back-cancel default">Cancel</a>
+	  	<input type="submit" class="btn btn-green" value="Add"> 
+	  	<a href="#" class="btn-default back-cancel default">Cancel</a>
 	  </div>
 	</div>
 <% end %>
