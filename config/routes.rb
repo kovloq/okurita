@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   # 
+  get 'auction', to: 'yauction#index'
+  get 'auction/category/:id', to: 'yauction#category',as: "auction_category"
 
   namespace :admin do
   		get '/', to: 'home#index'
