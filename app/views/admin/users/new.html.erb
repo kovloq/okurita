@@ -1,40 +1,70 @@
+<div class="container-fluid">
+    <div class="page-header">
+        <div class="row">
+            <div class="col-6">
+                <h3>User</h3>
+                <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                	<%= link_to admin_path do %>
+                      <i data-feather="home"></i>
+                    <% end %>
+                </li>
+                <li class="breadcrumb-item">User</li>
+              </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
 <% if @user.errors.full_messages.any? %>
   <% @user.errors.full_messages.each do |error_message| %>
     <%= error_message if @user.errors.full_messages.first == error_message %> <br />
   <% end %>
 <% end %>
 
-<%= form_for @user,url: {action: "create"} do |f| %>
-	<div class="form-body">
-	  <div class="form-group">
-		<label for="title" >Name</label>
-		<%= text_field(:user, :name,class:"form-control",placeholder:"name") %>
-	  </div>
-	  <div class="form-group">
-		<label for="title" >Email</label>
-		<%= text_field(:user, :email,class:"form-control",placeholder:"email@example.com") %>
-	  </div>
-	  <div class="form-group">
-		<label for="title" >Password</label>
-		<%= password_field(:user, :password,class:"form-control",placeholder:"") %>
 
-	  </div>
-	  <div class="form-group">
-		<label for="title" >Birth date</label>
-		<%= text_field(:user, :birth_date,class:"form-control",placeholder:"2020-01-01") %>
-		
-	  </div>
-	  <div class="form-group">
-		<label for="title" >Country</label>
-		<%= f.select(:country_id, @country.collect {|c| [c.name, c.id] }, {}, {class: 'form-control'}) %>
-	  </div>
-	  <div class="form-group">
-		<label for="title" >Newsletetr</label>
-	  	<%= check_box_tag(:is_newsletter) %>
-	  </div>
-	  <div class="form-actions">
-	  	<input type="submit" class="btn btn-green" value="Add"> 
-	  	<a href="#" class="btn-default back-cancel default">Cancel</a>
-	  </div>
+<div class="row">
+	<div class="col-sm-12">
+		<div class="card">
+			<div class="card-header">
+				<h5>User</h5>
+			</div>
+			<div class="card-body">
+			<%= form_for @user,url: {action: "create"} do |f| %>
+				<div class="form-body">
+				  <div class="form-group">
+					<label for="title" >Name</label>
+					<%= text_field(:user, :name,class:"form-control",placeholder:"name") %>
+				  </div>
+				  <div class="form-group">
+					<label for="title" >Email</label>
+					<%= text_field(:user, :email,class:"form-control",placeholder:"email@example.com") %>
+				  </div>
+				  <div class="form-group">
+					<label for="title" >Password</label>
+					<%= password_field(:user, :password,class:"form-control",placeholder:"") %>
+
+				  </div>
+				  <div class="form-group">
+					<label for="title" >Birth date</label>
+					<%= text_field(:user, :birth_date,class:"form-control",placeholder:"2020-01-01") %>
+					
+				  </div>
+				  <div class="form-group">
+					<label for="title" >Country</label>
+					<%= f.select(:country_id, @country.collect {|c| [c.name, c.id] }, {}, {class: 'form-control'}) %>
+				  </div>
+				  <div class="form-group">
+					<label for="title" >Newsletetr</label>
+				  	<%= check_box_tag(:is_newsletter) %>
+				  </div>
+				  <div class="form-actions">
+				  	<input type="submit" class="btn btn-green" value="Add"> 
+				  	<a href="#" class="btn-default back-cancel default">Cancel</a>
+				  </div>
+				</div>
+			<% end %>
+			</div>
+		</div>
 	</div>
-<% end %>
+</div>

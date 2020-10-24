@@ -15,6 +15,10 @@ module Okurita
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
-    config.serve_static_assets = true
+    # config.serve_static_assets = true
+    
+	 # Enable the asset pipeline
+	#config.assets.enabled = true
+	config.assets.paths << Rails.root.join("app", "assets", "fonts")
   end
 end

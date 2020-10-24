@@ -1,7 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>Okurita</head>
+  <head>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'front', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <title>Okurita</title>
+  </head>
   <body>
+  	<ul>
+  		<li><%= link_to "Ladies Fashion",rakuten_category_path(id:100371) %> </li>
+  		<li><%= link_to "Men's Fashion",rakuten_category_path(id:551177) %> </li>
+  		<li><%= link_to "Bags & Accessories",rakuten_category_path(id:216137) %> </li>
+  		<li><%= link_to "Kids & Baby",rakuten_category_path(id:100533) %> </li>
+  		<li><%= link_to "Shoes",rakuten_category_path(id:558885) %> </li>
+  		<li><%= link_to "Watch",rakuten_category_path(id:558929) %> </li>
+  		<li><%= link_to "Jewelry & Accessories",rakuten_category_path(id:216129) %> </li>
+  		<li><%= link_to "Toys",rakuten_category_path(id:556382) %> </li>
+  		<li><%= link_to "Sports & Outdoor",rakuten_category_path(id:101070) %> </li>
+  		<li><%= link_to "TV, Audio, Camera",rakuten_category_path(id:211742) %> </li>
+  		<li><%= link_to "Computer",rakuten_category_path(id:100026) %> </li>
+  		<li><%= link_to "Manga",rakuten_category_path(id:200162) %> </li>
+  		<li><%= link_to "CD/DVD Music",rakuten_category_path(id:101240) %> </li>
+  		<li><%= link_to "Video games",rakuten_category_path(id:101205) %> </li>
+  		<li><%= link_to "Pets",rakuten_category_path(id:101213) %> </li>
+  		<li><%= link_to "Food & Drinks",rakuten_category_path(id:100277) %> </li>
+  		<li><%= link_to "Drinks",rakuten_category_path(id:100316) %> </li>
+  	</ul>
 	<%= yield %>
   </body>
 </html>

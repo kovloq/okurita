@@ -6,4 +6,9 @@ class YauctionController < ApplicationController
 	def category
 		render layout: 'yauction'
 	end
+
+	def detail
+		render layout: 'yauction'
+	end
+
 end

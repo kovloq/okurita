@@ -1,0 +1,13 @@
+<div class="row">
+	<% @data["hits"].each do |row| %>
+	
+		<div class="col-md-4">	
+			<img class="img-thumbnail" src="<%= row["image"]["medium"] %>">
+			<p>
+				<%= link_to row["name"],shopping_detail_path(id:row["seller"]["sellerId"]) %>
+				
+			</p>
+			<p><%= number_with_delimiter(row["price"]) %>  Yen</p>
+		</div>
+	<% end %>
+</div>
