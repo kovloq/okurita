@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # resources :administrators
   devise_for :users
   # 
   get 'auction', to: 'yauction#index'
@@ -15,7 +16,9 @@ Rails.application.routes.draw do
   get 'amazon/detail/:id', to: 'amazon#detail',as: "amazon_detail"
 
   namespace :admin do
-  		get '/', to: 'home#index'
+  	get '/', to: 'home#index'
+    get 'login', to: 'admin#login'
+    get 'post', to: 'admin#login_post'
 		resources :users
 		# resources :contents
 		resources :orders

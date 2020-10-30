@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_07_065638) do
+ActiveRecord::Schema.define(version: 2020_10_30_232711) do
+
+  create_table "administrators", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+    t.string "email"
+    t.string "password_digest"
+    t.string "force"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_administrators_on_email", unique: true
+  end
 
   create_table "admins", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.string "name"
@@ -57,6 +66,11 @@ ActiveRecord::Schema.define(version: 2020_09_07_065638) do
     t.index ["product_id"], name: "fk_rails_bd36e75ae4"
   end
 
+  create_table "invoices", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "news", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.string "title"
     t.text "content"
@@ -90,10 +104,8 @@ ActiveRecord::Schema.define(version: 2020_09_07_065638) do
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.string "title"
     t.text "content"
-    t.bigint "category_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["category_id"], name: "index_posts_on_category_id"
   end
 
   create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
@@ -163,7 +175,6 @@ ActiveRecord::Schema.define(version: 2020_09_07_065638) do
   add_foreign_key "images", "products"
   add_foreign_key "order_details", "orders"
   add_foreign_key "orders", "shippings"
-  add_foreign_key "posts", "categories"
   add_foreign_key "products", "shops"
   add_foreign_key "refunds", "users"
 end

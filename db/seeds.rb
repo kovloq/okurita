@@ -424,3 +424,8 @@ ShippingFee.create([
 	{ shipping_id: 6,area_1: 2140,area_2: 2795, area_3: 2795, area_4: 3685, weight:50 },
 	{ shipping_id: 6,area_1: 2360,area_2: 3065, area_3: 3065, area_4: 4055, weight:50 }
 ])
+
+
+Administrator.create([
+	{email:"admin@okurita.com",password_digest:"$2a$12$.oC7BXxW.GX2CkNTWsX5UuRmH7qbo0Rh5UlWNSTEpGn4kjEr8Je4y"}
+])
