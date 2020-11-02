@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cuba admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+    <meta name="keywords" content="admin template, Cuba admin template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="author" content="pixelstrap">
+    <%= favicon_link_tag asset_path('favicon.png') %>
+    <title>Okurita Login</title>
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&amp;display=swap" rel="stylesheet">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>    
+  </head>
+  <body>
+    <!-- tap on top starts-->
+    <div class="tap-top"><i data-feather="chevrons-up"></i></div>
+    <!-- tap on tap ends-->
+    <!-- page-wrapper Start-->
+    <div class="page-wrapper">
+      <div class="container-fluid p-0">
+        <!-- login page start-->
+        <div class="authentication-main no-bg">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="auth-innerright">
+                <div class="authentication-box">
+                  <div class="mt-4">
+                    <div class="card-body">
+                      <div class="cont text-center">
+                        <div> 
+                          <form class="theme-form">
+                            <h4>LOGIN</h4>
+                            <div class="form-group">
+                              <label class="col-form-label pt-0">Your Name</label>
+                              <input class="form-control" type="text" required="">
+                            </div>
+                            <div class="form-group">
+                              <label class="col-form-label">Password</label>
+                              <input class="form-control" type="password" required="">
+                            </div>
+                            <div class="checkbox p-0">
+                              <input id="checkbox1" type="checkbox">
+                              <label for="checkbox1">Remember me</label>
+                            </div>
+                            <div class="form-group row mt-3 mb-0">
+                              <button class="btn btn-primary btn-block" type="submit">LOGIN</button>
+                            </div>
+                          </form>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- login page end-->
+      </div>
+    </div>
+    
+  </body>
+</html>

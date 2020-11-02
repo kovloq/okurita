@@ -17,8 +17,8 @@ Rails.application.routes.draw do
 
   namespace :admin do
   	get '/', to: 'home#index'
-    get 'login', to: 'admin#login'
-    get 'post', to: 'admin#login_post'
+    get 'login', to: 'auth#login'
+    post 'login_post', to: 'auth#login_post'
 		resources :users
 		# resources :contents
 		resources :orders
