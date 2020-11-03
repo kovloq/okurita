@@ -1,4 +1,5 @@
 class Admin::NewsController < ApplicationController
+  before_action :authorized
 	def index
     	@news = News.order(:id => :desc).page(params[:page]).per(10)
   	end

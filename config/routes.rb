@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  # resources :administrators
+  resources :administrators
   devise_for :users
   # 
   get 'auction', to: 'yauction#index'
@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   	get '/', to: 'home#index'
     get 'login', to: 'auth#login'
     post 'login_post', to: 'auth#login_post'
+    get 'logout', to: 'auth#logout'
 		resources :users
 		# resources :contents
 		resources :orders

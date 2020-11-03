@@ -427,5 +427,6 @@ ShippingFee.create([
 
 
 Administrator.create([
-	{email:"admin@okurita.com",password_digest:"$2a$12$.oC7BXxW.GX2CkNTWsX5UuRmH7qbo0Rh5UlWNSTEpGn4kjEr8Je4y"}
+	{email:"admin@okurita.com",password_digest:"$2a$12$JFjqiuwBOlqtvXBIVivjUuW4bsoU10v6p4Xva5S09Y9cTqAm.vUPe"}
 ])
+#password 12345678

@@ -1,4 +1,5 @@
 class Admin::RefundsController < ApplicationController
+  before_action :authorized
 	def index
     	@refunds = Refund.order(:id => :desc).page(params[:page]).per(10)
   	end

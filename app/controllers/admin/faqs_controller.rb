@@ -1,5 +1,5 @@
 class Admin::FaqsController < ApplicationController
-
+  before_action :authorized
 	def index
     	@faqs = Faq.order(:id => :desc).page(params[:page]).per(10)
   	end

@@ -44,15 +44,21 @@
           <div class="nav-right col-8 pull-right right-menu">
             <ul class="nav-menus">
               <li class="profile-nav onhover-dropdown p-0">
+                <% if current_admin %>
                 <div class="media profile-media">
                   <%= image_tag("/assets/images/profile.jpg", class: "b-r-10") %>
-                  <div class="media-body"><span>Emay Walter</span>
-                    <p class="mb-0 font-roboto">Admin <i class="middle fa fa-angle-down"></i></p>
+                  <div class="media-body"><span><%= current_admin.name.capitalize  %></span>
+                    <p class="mb-0 font-roboto"><%= current_admin.name %> <i class="middle fa fa-angle-down"></i></p>
                   </div>
                 </div>
                 <ul class="profile-dropdown onhover-show-div">
-                  <li><i data-feather="log-in"> </i><span>Log out</span></li>
+                  <li>
+                    <%= link_to admin_logout_path do %>
+                    <i data-feather="log-in"> </i><span>Log out</span>
+                    <% end %>    
+                  </li>
                 </ul>
+                <% end %>
               </li>
             </ul>
           </div>

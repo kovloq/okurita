@@ -32,17 +32,19 @@
                 <div class="authentication-box">
                   <div class="mt-4">
                     <div class="card-body">
+                      <p id=”alert”><%= alert %></p>
+                      <%= debug @debug %>
                       <div class="cont text-center">
                         <div> 
-                          <form class="theme-form">
+                          <%= form_for @administrator,url: {action: "login_post"},html: {class: "theme-form"} do |f| %>
                             <h4>LOGIN</h4>
                             <div class="form-group">
-                              <label class="col-form-label pt-0">Your Name</label>
-                              <input class="form-control" type="text" required="">
+                              <label class="col-form-label pt-0">Email</label>
+                              <%= f.email_field "email", class: 'form-control' %>
                             </div>
                             <div class="form-group">
                               <label class="col-form-label">Password</label>
-                              <input class="form-control" type="password" required="">
+                              <%= f.password_field "password", class: 'form-control' %>
                             </div>
                             <div class="checkbox p-0">
                               <input id="checkbox1" type="checkbox">
@@ -51,7 +53,7 @@
                             <div class="form-group row mt-3 mb-0">
                               <button class="btn btn-primary btn-block" type="submit">LOGIN</button>
                             </div>
-                          </form>
+                          <% end %>
                         </div>
                         
                       </div>
