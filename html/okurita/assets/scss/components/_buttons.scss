@@ -1,0 +1,112 @@
+.btn{
+    border-radius: 10px;
+    padding: 10px 20px;
+    box-shadow: none !important;
+    line-height: 1.2;
+    font-size: 14px;
+    font-weight: 700;
+
+    &-primary{
+        background-color: $primary;
+        border-color: $primary;
+        color: #fcfcfc;
+
+        &:hover, &:focus, &:active{
+            border-color: lighten($primary, 10%) !important;
+            box-shadow: none !important;
+            background-color: lighten($primary, 10%) !important;
+            color: #fcfcfc;
+        }
+    }
+
+    &-secondary{
+        background-color: $secondary;
+        border-color: $secondary;
+        color: $white;
+
+        &:hover, &:focus, &:active{
+            border-color: lighten($secondary, 10%) !important;
+            box-shadow: none !important;
+            background-color: lighten($secondary, 10%) !important;
+            color: $white;
+        }
+    }
+
+    &-grey{
+        background-color: $grey;
+        border-color: $grey;
+        color: $black;
+
+        &:hover, &:focus, &:active{
+            border-color: lighten($grey, 10%) !important;
+            box-shadow: none !important;
+            background-color: lighten($grey, 10%) !important;
+            color: $black;
+        }
+    }
+
+    &-outline-primary{
+        background-color: transparent;
+        border-color: $primary;
+        color: $primary;
+        border-width: 2px;
+
+        &:hover, &:focus, &:active{
+            border-color: $primary !important;
+            box-shadow: none !important;
+            background-color: $primary !important;
+            color: $white;
+        }
+    }
+
+    &-outline-secondary{
+        background-color: transparent;
+        border-color: $secondary;
+        color: $secondary;
+
+        &:hover, &:focus, &:active{
+            border-color: $secondary !important;
+            box-shadow: none !important;
+            background-color: $secondary !important;
+            color: $primary;
+        }
+    }
+
+    &-outline-light{
+        background-color: transparent;
+        border-color: #fcfcfc;
+        color: #fcfcfc;
+
+        &:hover, &:focus, &:active{
+            border-color: $primary !important;
+            box-shadow: none !important;
+            background-color: $primary !important;
+            color: #fcfcfc;
+        }
+    }
+
+    &-outline-grey{
+        background-color: transparent;
+        border-color: #a1a1a1;
+        color: #a1a1a1;
+
+        &:hover, &:focus, &:active{
+            border-color: #a1a1a1 !important;
+            box-shadow: none !important;
+            background-color: transparent !important;
+            color: #a1a1a1;
+        }
+    }
+
+    &-icon{
+        &-center{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img{
+                margin-right: 5px;
+            }
+        }
+    }
+}

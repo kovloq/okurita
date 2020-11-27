@@ -1,0 +1,349 @@
+.card{
+  $card: &;
+  box-shadow: 0px 0px 30px -10px rgba(#1c863b, 0.6);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  margin-bottom: 30px;
+
+  &-banner{
+    border-radius: 20px;
+    margin-bottom: 15px;
+    &:before{
+      width: 100%;
+      height: 60%;
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+      z-index: 1;
+    }
+  }
+
+  &-blog{
+    display: flex;
+    flex-direction: row;
+
+    @include device(mobile){
+      flex-direction: column;
+    }
+  }
+
+  &-product{
+    background-color: transparent;
+    border-radius: 0px;
+    box-shadow: none;
+    overflow: unset;
+  }
+
+  &-feature{
+    background-color: $primary;
+    text-align: center;
+    overflow: visible;
+    margin-top: 70px;
+  }
+
+  &-img{
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+    overflow: hidden;
+
+    #{ $card }-banner--long &{
+      padding-bottom: 50%;
+    }
+
+    #{ $card }-product &{
+      margin-bottom: 15px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 30px -10px rgba(#1c863b, 0.6);
+    }
+
+    #{ $card }-blog &{
+      flex: 0 0 235px;
+      width: 235px;
+      height: 205px;
+      padding: 0;
+
+      @include device(mobile){
+        flex: unset;
+        width: 100%;
+        height: 225px;
+      }
+    }
+
+    #{ $card }-news &{
+      width: 100%;
+      height: 225px;
+      padding: 0;
+    }
+
+    #{ $card }-feature &{
+      width: 100%;
+      height: auto;
+      padding: 0;
+      padding-left: 10px;
+      margin-top: -70px;
+    }
+
+    img{
+      @include img-cover;
+
+      #{ $card }-feature &{
+        position: unset;
+        width: unset;
+        max-width: 100%;
+        height: auto;
+        object-fit: unset;
+        object-position: unset;
+        vertical-align: top;
+      }
+    }
+  }
+
+  &-badge{
+    position: absolute;
+    z-index: 10;
+    top: 25px;
+    left: 0;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 0px 10px 10px 0px;
+    background-color: $primary;
+    padding: 10px 20px;
+    color: $white;
+
+    #{ $card }-banner--sm & {
+      top: 15px;
+    }
+  }
+
+  &-action{
+    top: 5px;
+    right: 10px;
+    position: absolute;
+    z-index: 10;
+    display: flex;
+
+    #{ $card }-banner & {
+      top: 30px;
+      right: 25px;
+      height: 25px;
+    }
+
+    #{ $card }-banner--sm & {
+      top: 20px;
+      right: 10px;
+    }
+
+    &__item{
+      margin-left: 7px;
+
+      #{ $card }-banner & {
+        margin-left: 10px;
+      }
+
+      input{
+        display: none;
+
+        + label{
+          width: 22px;
+          height: 22px;
+          flex: 0 0 22px;
+          border-radius: 50%;
+          background-color: $white;
+          border: 1px solid #d1d1d1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 12px;
+          cursor: pointer;
+          padding: 0;
+          margin: 0;
+          color: $white;
+          text-shadow: -1px -1px 0 #d1d1d1, 1px -1px 0 #d1d1d1, -1px 1px 0 #d1d1d1, 1px 1px 0 #d1d1d1;
+
+          #{ $card }-banner & {
+            width: 30px;
+            height: 30px;
+            font-size: 15px;
+          }
+
+          i{
+            transition: all 0.3s ease-in-out;
+
+            &:hover{
+              color: $primary;
+            }
+
+            &.fa-heart{
+              &:hover{
+                color: $red;
+              }
+            }
+          }
+        }
+
+        &:checked{
+          + label{
+            .fa-heart{
+              color: $red;
+            }
+            .fa-shopping-basket{
+              color: $primary;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-body{
+    padding: 0;
+    z-index: 5;
+
+    #{ $card }-banner &{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px 30px;
+    }
+
+    #{ $card }-blog &, #{ $card }-news &{
+      padding: 15px;
+    }
+
+    #{ $card }-news &{
+      display: flex;
+      flex-direction: column;
+      min-height: 215px;
+    }
+
+    #{ $card }-feature &{
+      padding: 20px;
+      min-height: 145px;
+    }
+  }
+
+  &-title{
+    color: $black;
+    font-size: 18px;
+    margin-bottom: 8px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    a{
+      color: $black;
+
+      &:hover{
+        color: $primary;
+      }
+    }
+
+    #{ $card }-banner &, #{ $card }-blog &, #{ $card }-news &{
+      font-size: 24px;
+      font-weight: 800;
+    }
+
+    #{ $card }-blog &, #{ $card }-news &{
+      white-space: normal;
+    }
+
+    #{ $card }-feature & {
+      font-size: 20px;
+      font-weight: 700;
+      color: $white;
+      white-space: normal;
+      margin-bottom: 0;
+    }
+  }
+
+  &-sku{
+    color: $black;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: -3px;
+    margin-bottom: 15px;
+  }
+
+  &-price{
+    font-size: 20px;
+    color: $primary;
+    margin-bottom: 0;
+    font-weight: 700;
+
+    #{ $card }-banner &{
+      font-size: 34px;
+      color: $black;
+      font-weight: 900;
+    }
+  }
+
+  &-brand{
+    img{
+      width: auto;
+      height: 28px;
+    }
+  }
+
+  &-meta{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    &__item{
+      margin-right: 8px;
+      &-category{
+        font-size: 10px;
+        font-weight: 900;
+        color: $white;
+        text-transform: uppercase;
+        padding: 3px 5px;
+        background-color: $primary;
+        text-transform: uppercase;
+      }
+      &-date{
+        font-size: 14px;
+        font-weight: 400;
+        color: #636363;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &-excerpt{
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  &-readmore{
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $black;
+
+    #{ $card }-news &{
+      margin-top: auto;
+    }
+
+    i{
+      margin-left: 5px;
+    }
+
+    &:hover{
+      color: $primary;
+    }
+  }
+
+  &:hover{
+    #{ $card }-img{
+      img{
+        transform: scale(1.1);
+      }
+    }
+  }
+}

@@ -1,0 +1,73 @@
+.bg{
+  &-primary{
+    background-color: $primary !important;
+  }
+  &-light-green{
+    background-color: #eaf7eb !important;
+  }
+
+  &-leaf{
+    position: relative;
+
+    &:before, &:after{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      content: "";
+      top: 0;
+      background-repeat: no-repeat;
+
+      @include device(mobile){
+        display: none;
+      }
+    }
+
+    &:before{
+      left: 0;
+      background-image: url("../img/background/bg-leaf-left.png");
+      background-position: left bottom;
+    }
+
+    &:after{
+      right: 0;
+      background-image: url("../img/background/bg-leaf-right.png");
+      background-position: right bottom;
+    }
+  }
+
+  &-ornament{
+    position: relative;
+
+    &:before, &:after{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      content: "";
+      top: 0;
+      background-repeat: no-repeat;
+
+      @include device(mobile){
+        display: none;
+      }
+    }
+
+    &:before{
+      left: 0;
+      background-image: url("../img/background/ornament-1.png");
+      background-position: right center;
+    }
+
+    &:after{
+      right: 0;
+      background-image: url("../img/background/ornament-2.png");
+      background-position: right bottom;
+    }
+
+    &.bg-ornament--sm{
+      &:after{
+        display: none;
+        // background-image: url("../img/background/ornament-2-sm.png");
+      }
+    }
+  }
+}

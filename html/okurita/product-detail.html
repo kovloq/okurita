@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Okurita</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--Favicon-->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- FONT -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- STYLE -->
+    <link rel="stylesheet" type="text/css" media="all" href="./assets/css/animate.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="all" href="./assets/lib/aos/aos.css">
+    <link rel="stylesheet" type="text/css" media="all" href="./assets/lib/slick/slick.css">
+    <link rel="stylesheet" type="text/css" media="all" href="./assets/lib/cloudzoom/cloudzoom.css">
+    <link rel="stylesheet" type="text/css" media="all" href="./assets/lib/thumbelina/thumbelina.css">
+    <link rel="stylesheet" type="text/css" media="all" href="./assets/lib/bootstrap-rating/bootstrap-rating.css">
+    <link rel="stylesheet" type="text/css" media="all" href="./assets/lib/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" type="text/css" media="all" href="./assets/css/theme.css">
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="./assets/js/jquery.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script>
+        var pageTitle = "Product Detail";
+    </script>
+</head>
+
+<body>
+<!--Header-->
+<header class="header" id="header">
+    <div class="header-top">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <div class="collapse navbar-collapse" id="navbarcollapse" data-parent="#header">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" title="About Okurita">
+                                About Okurita
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" title="FAQ">
+                                FAQ
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" title="Contact Us">
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="header-bottom">
+        <nav class="navbar navbar-expand-lg" id="page-navigation">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarcollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <!-- Navbar Brand -->
+                <a href="index.html" class="navbar-brand">
+                    <img src="assets/img/logo/color.png" alt="Okurita's Logo" />
+                </a>
+                <div class="collapse navbar-collapse flex-column" id="navbarSearch" data-parent="#header">
+                    <form>
+                        <div class="navbar-search">
+                            <select name="search-category" id="search-category" class="form-select">
+                                <option>Rakuten</option>
+                                <option>Amazon</option>
+                                <option>Yahoo</option>
+                            </select>
+                            <input type="text" name="search" id="search" class="form-control" placeholder="Search">
+                            <button class="btn btn-search" type="submit">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <div class="row justify-content-center marketplace">
+                        <div class="col-3 marketplace__item">
+                            <a href="product-list.html" title="Market Place 1">
+                                <img src="./assets/img/logo/marketplace/rakuten.png" alt="Rakuten" />
+                            </a>
+                        </div>
+                        <div class="col-3 marketplace__item">
+                            <a href="product-list.html" title="Market Place 2">
+                                <img src="./assets/img/logo/marketplace/amazon.png" alt="Amazon" />
+                            </a>
+                        </div>
+                        <div class="col-3 marketplace__item">
+                            <a href="product-list.html" title="Market Place 3">
+                                <img src="./assets/img/logo/marketplace/3.png" alt="Marketplace" />
+                            </a>
+                        </div>
+                        <div class="col-3 marketplace__item">
+                            <a href="product-list.html" title="Market Place 4">
+                                <img src="./assets/img/logo/marketplace/yahoo.png" alt="Yahoo" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <ul class="navbar-nav navbar-nav--main ml-auto">
+                    <li class="nav-item d-mobile">
+                        <a data-toggle="collapse" data-target="#navbarSearch" class="nav-link" title="Search">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cart.html" class="nav-link" title="Cart">
+                            <i class="fas fa-shopping-basket"></i>
+                            <span class="pulse pulse-warning"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" title="Notifications">
+                            <i class="fas fa-bell"></i>
+                            <span class="pulse pulse-warning"></span>
+                        </a>
+                    </li>
+                    <!--If Login-->
+                    <!--<li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-user"></i>
+                        </a>
+                    </li>-->
+                    <!--/If Login-->
+
+                    <!--Login/Register CTA on Desktop-->
+                    <li class="nav-item nav-item--cta d-desktop d-tablet">
+                        <a href="login.html" class="btn btn-primary" title="Login">
+                            Login
+                        </a>
+                        <a href="login.html" class="btn btn-grey" title="Sign Up">
+                            Sign Up
+                        </a>
+                    </li>
+                    <!--Login/Register CTA on Mobile-->
+                    <li class="nav-item d-mobile d-tablet-none">
+                        <a href="login.html" class="nav-link">
+                            <i class="fas fa-user"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main class="main" id="main">
+    <div class="page page--product-detail bg-ornament">
+        <section class="product-overview py-5" id="product-overview">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-1 col-2">
+                        <div class="slider-thumbnail">
+                            <ul>
+                                <li>
+                                    <img class='cloudzoom-gallery cloudzoom-gallery-active' src="assets/img/product/detail/thumbnail-1.png" data-cloudzoom="useZoom:'.cloudzoom-1', image:'assets/img/product/detail/main-1.png'" alt="Thumbnail Products" />
+                                </li>
+                                <li>
+                                    <img class='cloudzoom-gallery' src="assets/img/product/detail/thumbnail-2.png" data-cloudzoom="useZoom:'.cloudzoom-1', image:'assets/img/product/detail/main-2.jpg'" alt="Thumbnail Products" />
+                                </li>
+                                <li>
+                                    <img class='cloudzoom-gallery' src="assets/img/product/detail/thumbnail-3.png" data-cloudzoom="useZoom:'.cloudzoom-1', image:'assets/img/product/detail/main-3.jpg'" alt="Thumbnail Products" />
+                                </li>
+                                <li>
+                                    <img class='cloudzoom-gallery' src="assets/img/product/detail/thumbnail-4.png" data-cloudzoom="useZoom:'.cloudzoom-1', image:'assets/img/product/detail/main-4.jpg'" alt="Thumbnail Products" />
+                                </li>
+                                <li>
+                                    <img class='cloudzoom-gallery' src="assets/img/product/detail/thumbnail-5.png" data-cloudzoom="useZoom:'.cloudzoom-1', image:'assets/img/product/detail/main-5.jpg'" alt="Thumbnail Products" />
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-11 col-10">
+                        <div class="slider-zoom mb-3">
+                            <img class="cloudzoom cloudzoom-1" alt="Detail Zoom thumbs image" id="zoom1" src="assets/img/product/detail/main-1.png" data-cloudzoom='zoomPosition:"inside", autoInside: true, zoomOffsetX:0'>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="product-list.html">Rakuten</a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="product-list.html">Shoes</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    <a href="product-list.html">Sneakers</a>
+                                </li>
+                            </ol>
+                        </nav>
+                        <div class="row">
+                            <div class="col-md-11 col-10">
+                                <h1 class="product-title">ADIDAS ULTRA BOOST CG3038 TRIPLE BLACK </h1>
+                            </div>
+                            <div class="col-md-1 col-2 text-right">
+                                <a href="#" class="product-share">
+                                    <i class="fas fa-share-alt-square"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row align-items-center mb-25px">
+                            <div class="col-auto">
+                                <input type="hidden" class="rating" value="4" data-filled="fas fa-star" data-empty="fas fa-star" data-readonly />
+                            </div>
+                            <div class="col-auto">
+                                <p class="product-meta">
+                                    127 View
+                                </p>
+                            </div>
+                            <div class="col-auto">
+                                <p class="product-meta">
+                                    <i class="fas fa-shopping-bag text-primary"></i> 116 Order
+                                </p>
+                            </div>
+                        </div>
+                        <h2 class="product-price">
+                            US$ 276.00
+                        </h2>
+                        <form action="">
+                            <div class="product-vendor">
+                                <div class="product-vendor__item">
+                                    <input type="radio" name="vendor" id="vendor-1" checked>
+                                    <label for="vendor-1">
+                                        <img src="./assets/img/logo/marketplace/rakuten.png" alt="Rakuten" />
+                                    </label>
+                                </div>
+                                <div class="product-vendor__item">
+                                    <input type="radio" name="vendor" id="vendor-2">
+                                    <label for="vendor-2">
+                                        <img src="./assets/img/logo/marketplace/amazon.png" alt="Amazon" />
+                                    </label>
+                                </div>
+                                <div class="product-vendor__item">
+                                    <input type="radio" name="vendor" id="vendor-3">
+                                    <label for="vendor-3">
+                                        <img src="./assets/img/logo/marketplace/3.png" alt="Rakuten" />
+                                    </label>
+                                </div>
+                                <div class="product-vendor__item">
+                                    <input type="radio" name="vendor" id="vendor-4">
+                                    <label for="vendor-4">
+                                        <img src="./assets/img/logo/marketplace/yahoo.png" alt="Yahoo" />
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2 col-4">
+                                    <p class="product-meta mb-10px">Quantity</p>
+                                    <div class="product-qty">
+                                        <button type="button" class="btn btn-qty">-</button>
+                                        <input type="number" min="1" class="form-control" value="1">
+                                        <button type="button" class="btn btn-qty">+</button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-8">
+                                    <p class="product-meta mb-10px">Select Size</p>
+                                    <div class="row">
+                                        <div class="col-lg-auto col-md-3 col-auto">
+                                            <div class="form-group">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="size" id="size-39" value="39" checked>
+                                                    <label class="form-check-label" for="size-39">
+                                                        39
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-auto col-md-3 col-auto">
+                                            <div class="form-group">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="size" id="size-40" value="40">
+                                                    <label class="form-check-label" for="size-40">
+                                                        40
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-auto col-md-3 col-auto">
+                                            <div class="form-group">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="size" id="size-41" value="41">
+                                                    <label class="form-check-label" for="size-41">
+                                                        41
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-auto col-md-3 col-auto">
+                                            <div class="form-group">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="size" id="size-42" value="42">
+                                                    <label class="form-check-label" for="size-42">
+                                                        42
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-auto col-md-3 col-auto">
+                                            <div class="form-group">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="size" id="size-43" value="43">
+                                                    <label class="form-check-label" for="size-43">
+                                                        43
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-auto col-md-3 col-auto">
+                                            <div class="form-group">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="size" id="size-44" value="44">
+                                                    <label class="form-check-label" for="size-44">
+                                                        44
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-auto col-md-3 col-auto">
+                                            <div class="form-group">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="size" id="size-45" value="45">
+                                                    <label class="form-check-label" for="size-45">
+                                                        45
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-action">
+                                <div class="row">
+                                    <div class="col-md-auto">
+                                        <button type="submit" class="btn btn-primary text-uppercase">
+                                            Buy Now
+                                        </button>
+                                    </div>
+                                    <div class="col-md-auto">
+                                        <button type="button" class="btn btn-primary text-uppercase">
+                                            Add to Cart
+                                        </button>
+                                    </div>
+                                    <div class="col-md-auto">
+                                        <a href="#" class="btn btn-primary text-uppercase">
+                                            View on Yahoo! Auction
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="product-description py-0" id="product-description">
+            <div class="container border-bottom pb-5">
+                <p>
+                    商品説明<br>
+                    ■ ブランド説明1948年設立のドイツのスポーツメーカー。靴職人の息子であるアドルフ・ダスラーが1920年「ダスラー兄弟商会」を設立したのが始まり。<br>
+                    ■ アイテム説明【 Y - 3 】 アディダスと山本耀司氏とのコラボレーションブランド。 革新的なスポーツウェアとして注目を集めています。 ファッション性が高く未来的なシル   	     エットでかなりのインパクトを与えてくれるY-3からピュアブースト スニーカーの入荷です。 軽量で履きやすく、ソールには衝撃吸収性と反発性にとても優れたBOOST(	     ブースト)を使用しているので、デザイン性はもちろん機能性ともに優た一足です。 お色はブラックです。<br>
+                    ■ アイテム詳細・MADE IN CHINA ・型番：CP9888 ・カラー：CBLACK/CBLACK/CBLACK<br>
+                    ■ サイズ感こちらは平均的なスニーカーの普段履きのサイズにてジャストでご着用頂けるサイズ感になります。<br>
+                    幅広・甲高の方の場合、0.5cmアップでのご着用をお勧めします。
+                </p>
+            </div>
+        </section>
+        <section class="product-related py-5" id="product-related">
+            <div class="container border-bottom pb-5">
+                <div class="row align-items-end">
+                    <div class="col-auto">
+                        <div class="section-title">
+                            <h3>Same Product</h3>
+                        </div>
+                    </div>
+                    <div class="col-auto ml-auto">
+                        <a href="product-list.html" class="see-all" title="See All">See All</a>
+                    </div>
+                </div>
+                <div class="row row-5-column">
+                    <div class="col-lg-2 col-md-6 col-6">
+                        <a href="product-detail.html" class="card card-product">
+                            <div class="card-img">
+                                <img src="./assets/img/product/1.png" alt="Product List" />
+                            </div>
+                            <div class="card-action">
+                                <div class="card-action__item">
+                                    <input type="checkbox" id="basket-product-1">
+                                    <label for="basket-product-1">
+                                        <i class="fas fa-shopping-basket"></i>
+                                    </label>
+                                </div>
+                                <div class="card-action__item">
+                                    <input type="checkbox" id="favorite-product-1">
+                                    <label for="favorite-product-1">
+                                        <i class="fas fa-heart"></i>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Nintendo Switch - Grey</h5>
+                                <h4 class="card-price">US$ 735.00</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-6">
+                        <a href="product-detail.html" class="card card-product">
+                            <div class="card-img">
+                                <img src="./assets/img/product/2.png" alt="Product List" />
+                            </div>
+                            <div class="card-action">
+                                <div class="card-action__item">
+                                    <input type="checkbox" id="basket-product-2">
+                                    <label for="basket-product-2">
+                                        <i class="fas fa-shopping-basket"></i>
+                                    </label>
+                                </div>
+                                <div class="card-action__item">
+                                    <input type="checkbox" id="favorite-product-2">
+                                    <label for="favorite-product-2">
+                                        <i class="fas fa-heart"></i>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Adidas ZNE Full-Zip Hoodie </h5>
+                                <h4 class="card-price">US$ 97.00</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-6">
+                        <a href="product-detail.html" class="card card-product">
+                            <div class="card-img">
+                                <img src="./assets/img/product/3.png" alt="Product List" />
+                            </div>
+                            <div class="card-action">
+                                <div class="card-action__item">
+                                    <input type="checkbox" id="basket-product-3">
+                                    <label for="basket-product-3">
+                                        <i class="fas fa-shopping-basket"></i>
+                                    </label>
+                                </div>
+                                <div class="card-action__item">
+                                    <input type="checkbox" id="favorite-product-3">
+                                    <label for="favorite-product-3">
+                                        <i class="fas fa-heart"></i>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Adidas POD-250</h5>
+                                <h4 class="card-price">US$ 120.00</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-6">
+                        <a href="product-detail.html" class="card card-product">
+                            <div class="card-img">
+                                <img src="./assets/img/product/4.png" alt="Product List" />
+                            </div>
+                            <div class="card-action">
+                                <div class="card-action__item">
+                                    <input type="checkbox" id="basket-product-4">
+                                    <label for="basket-product-4">
+                                        <i class="fas fa-shopping-basket"></i>
+                                    </label>
+                                </div>
+                                <div class="card-action__item">
+                                    <input type="checkbox" id="favorite-product-4">
+                                    <label for="favorite-product-4">
+                                        <i class="fas fa-heart"></i>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">HIMO Folding Bike</h5>
+                                <h4 class="card-price">US$ 370.00</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-6">
+                        <a href="product-detail.html" class="card card-product">
+                            <div class="card-img">
+                                <img src="./assets/img/product/4.png" alt="Product List" />
+                            </div>
+                            <div class="card-action">
+                                <div class="card-action__item">
+                                    <input type="checkbox" id="basket-product-5">
+                                    <label for="basket-product-5">
+                                        <i class="fas fa-shopping-basket"></i>
+                                    </label>
+                                </div>
+                                <div class="card-action__item">
+                                    <input type="checkbox" id="favorite-product-5">
+                                    <label for="favorite-product-4">
+                                        <i class="fas fa-heart"></i>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">HIMO Folding Bike</h5>
+                                <h4 class="card-price">US$ 370.00</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="product-recommended pt-0" id="product-recommended">
+            <div class="container">
+                <div class="row align-items-end">
+                    <div class="col-auto">
+                        <div class="section-title">
+                            <h3>Recommended For You</h3>
+                        </div>
+                    </div>
+                    <div class="col-auto ml-auto">
+                        <a href="product-list.html" class="see-all" title="See All">See All</a>
+                    </div>
+                </div>
+                <div class="row row-5-column">
+                    <div class="col-lg-2 col-md-6 col-6">
+                        <a href="product-detail.html" class="card card-product">
+                            <div class="card-img">
+                                <img src="./assets/img/product/1.png" alt="Product List" />
+                            </div>
+                            <div class="card-action">
+                                <div class="card-action__item">
+                                    <input type="checkbox" id="basket-product-1-recommended">
+                                    <label for="basket-product-1-recommended">
+                                        <i class="fas fa-shopping-basket"></i>
+                                    </label>
+                                </div>
+                                <div class="card-action__item">
+                                    <input type="checkbox" id="favorite-product-1-recommended">
+                                    <label for="favorite-product-1-recommended">
+                                        <i class="fas fa-heart"></i>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Nintendo Switch - Grey</h5>
+                                <h4 class="card-price">US$ 735.00</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-6">
+                        <a href="product-detail.html" class="card card-product">
+                            <div class="card-img">
+                                <img src="./assets/img/product/2.png" alt="Product List" />
+                            </div>
+                            <div class="card-action">
+                                <div class="card-action__item">
+                                    <input type="checkbox" id="basket-product-2-recommended">
+                                    <label for="basket-product-2-recommended">
+                                        <i class="fas fa-shopping-basket"></i>
+                                    </label>
+                                </div>
+                                <div class="card-action__item">
+                                    <input type="checkbox" id="favorite-product-2-recommended">
+                                    <label for="favorite-product-2-recommended">
+                                        <i class="fas fa-heart"></i>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Adidas ZNE Full-Zip Hoodie </h5>
+                                <h4 class="card-price">US$ 97.00</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-6">
+                        <a href="product-detail.html" class="card card-product">
+                            <div class="card-img">
+                                <img src="./assets/img/product/3.png" alt="Product List" />
+                            </div>
+                            <div class="card-action">
+                                <div class="card-action__item">
+                                    <input type="checkbox" id="basket-product-3-recommended">
+                                    <label for="basket-product-3-recommended">
+                                        <i class="fas fa-shopping-basket"></i>
+                                    </label>
+                                </div>
+                                <div class="card-action__item">
+                                    <input type="checkbox" id="favorite-product-3-recommended">
+                                    <label for="favorite-product-3-recommended">
+                                        <i class="fas fa-heart"></i>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Adidas POD-250</h5>
+                                <h4 class="card-price">US$ 120.00</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-6">
+                        <a href="product-detail.html" class="card card-product">
+                            <div class="card-img">
+                                <img src="./assets/img/product/4.png" alt="Product List" />
+                            </div>
+                            <div class="card-action">
+                                <div class="card-action__item">
+                                    <input type="checkbox" id="basket-product-4-recommended">
+                                    <label for="basket-product-4-recommended">
+                                        <i class="fas fa-shopping-basket"></i>
+                                    </label>
+                                </div>
+                                <div class="card-action__item">
+                                    <input type="checkbox" id="favorite-product-4-recommended">
+                                    <label for="favorite-product-4-recommended">
+                                        <i class="fas fa-heart"></i>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">HIMO Folding Bike</h5>
+                                <h4 class="card-price">US$ 370.00</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-6">
+                        <a href="product-detail.html" class="card card-product">
+                            <div class="card-img">
+                                <img src="./assets/img/product/4.png" alt="Product List" />
+                            </div>
+                            <div class="card-action">
+                                <div class="card-action__item">
+                                    <input type="checkbox" id="basket-product-5-recommended">
+                                    <label for="basket-product-5-recommended">
+                                        <i class="fas fa-shopping-basket"></i>
+                                    </label>
+                                </div>
+                                <div class="card-action__item">
+                                    <input type="checkbox" id="favorite-product-5-recommended">
+                                    <label for="favorite-product-4">
+                                        <i class="fas fa-heart"></i>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">HIMO Folding Bike</h5>
+                                <h4 class="card-price">US$ 370.00</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main> <!-- main -->
+
+<!--Footer-->
+<footer class="footer" id="footer">
+    <div class="container">
+        <div class="footer-bg">
+            <img src="./assets/img/logo/bg-footer.png" alt="Footer Bg Logo">
+        </div>
+        <div class="footer-top">
+            <div class="row">
+                <div class="col-lg-3 col-md-4">
+                    <div class="footer-logo">
+                        <a href="index.html">
+                            <img src="assets/img/logo/white.png" alt="Okurita's Logo" />
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-8">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        Contact Us
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Corporate Profile
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="policy.html">
+                                        Privacy Policy
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        Terms of Service
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        FAQ
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Usage Fee
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        Shipping Method
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Payment Method
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Terms &amp; Condition
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <h6 class="mb-2 font-weight-700">Follow Us at</h6>
+                    <ul class="social mb-0">
+                        <li>
+                            <a href="#" target="_blank" class="text-facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" class="text-twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" class="text-youtube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div> <!-- container -->
+    <div class="footer-copyright">
+        <div class="container">
+            <p>&copy; Copyright 2020, Okurita. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript" src="./assets/js/jquery-migrate.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js" integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD" crossorigin="anonymous"></script>
+<script type="text/javascript" src="./assets/lib/aos/aos.js"></script>
+<script type="text/javascript" src="./assets/lib/slick/slick.js"></script>
+<script type="text/javascript" src="./assets/lib/cloudzoom/cloudzoom.js"></script>
+<script type="text/javascript" src="./assets/lib/thumbelina/thumbelina.js"></script>
+<script type="text/javascript" src="./assets/lib/bootstrap-rating/bootstrap-rating.js"></script>
+<script type="text/javascript" src="./assets/lib/perfect-scrollbar/perfect-scrollbar.js"></script>
+<script type="text/javascript" src="./assets/js/theme.js"></script>
+</body>
+</html>

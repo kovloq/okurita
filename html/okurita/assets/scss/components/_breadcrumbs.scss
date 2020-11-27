@@ -1,0 +1,29 @@
+.breadcrumb{
+  $breadcrumb: &;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  margin-bottom: 20px;
+
+  &-item{
+    color: $black;
+    font-family: $roboto;
+    font-weight: 400;
+    font-size: 14px;
+
+    + #{ $breadcrumb }-item{
+      &:before{
+        color: $black;
+        content: ">";
+      }
+    }
+
+    a{
+      color: $black;
+
+      &:hover{
+        color: $primary;
+      }
+    }
+  }
+}

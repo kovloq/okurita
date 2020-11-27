@@ -1,0 +1,45 @@
+.font {
+  &-weight {
+    &-bold {
+      font-weight: bold !important;
+    }
+
+    &-700 {
+      font-weight: 700 !important;
+    }
+
+    &-medium {
+      font-weight: 500 !important;
+    }
+
+    &-normal {
+      font-weight: normal !important;
+    }
+
+    &-400 {
+      font-weight: 400 !important;
+    }
+
+    &-light {
+      font-weight: 300 !important;
+    }
+  }
+}
+
+.text{
+  &-primary{
+    color: $primary !important;
+  }
+  &-black{
+    color: $black !important;
+  }
+  &-facebook{
+    color: $facebook !important;
+  }
+  &-twitter{
+    color: $twitter !important;
+  }
+  &-youtube{
+    color: $youtube !important;
+  }
+}

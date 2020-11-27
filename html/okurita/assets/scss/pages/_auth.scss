@@ -1,0 +1,108 @@
+.auth{
+  &-form{
+    padding-top: 60px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    color: #a1a1a1;
+    height: 100%;
+
+    &__logo{
+      margin-bottom: 60px;
+      img{
+        height: 50px;
+        width: auto;
+      }
+    }
+
+    &__title{
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      p{
+        margin-bottom: 0;
+        font-weight: 900;
+        color: $primary;
+      }
+
+      h3{
+        font-weight: 900;
+        margin-bottom: 0;
+        color: $black;
+      }
+    }
+
+    .form-group{
+      margin-bottom: 15px;
+    }
+
+    .form-check{
+      &-label{
+        font-family: $nunito;
+        color: #a1a1a1;
+      }
+    }
+
+    .btn{
+      &-icon{
+        &-center{
+          border-radius: 5px;
+        }
+      }
+    }
+
+    &__privacy{
+      margin-top: auto;
+      p{
+        font-size: 10px;
+        color: #a1a1a1;
+
+        a{
+          color: #a1a1a1;
+          text-decoration: underline;
+
+          &:hover{
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+
+  &-slide{
+    margin-bottom: 0 !important;
+    line-height: 0;
+
+    &__item{
+      &-img{
+        width: 100%;
+        min-height: 765px;
+        position: relative;
+
+        @include device(tablet){
+          min-height: unset;
+        }
+
+        @include device(mobile){
+          min-height: unset;
+        }
+
+        img{
+          @include img-cover;
+
+          @include device(tablet){
+            position: unset;
+            height: auto;
+          }
+
+          @include device(mobile){
+            position: unset;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}

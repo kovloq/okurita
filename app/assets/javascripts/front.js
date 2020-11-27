@@ -1,0 +1,9 @@
+//= require jquery-3.5.1.min
+//= require rails-ujs
+//= require bootstrap5.min
+//= require aos
+//= require slick
+//= require cloudzoom
+//= require perfect-scrollbar
+//= require thumbelina
+//= require theme

@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   resources :administrators
   devise_for :users
-  # 
+  # root
+  root to: 'home#index'
+  get "help/about", to: 'help#about'
+  get "cart", to: 'cart#index'
   get 'auction', to: 'yauction#index'
   get 'auction/category/:id', to: 'yauction#category',as: "auction_category"
   get 'auction/detail/:id', to: 'yauction#detail',as: "auction_detail"

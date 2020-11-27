@@ -1,0 +1,37 @@
+h1{
+  font-size: 38px;
+}
+
+h2{
+  font-size: 28px;
+}
+
+h3{
+  font-size: 24px;
+}
+
+h4{
+  font-size: 20px;
+}
+
+h5{
+  font-size: 18px;
+}
+
+h6{
+  font-size: 16px;
+}
+
+.see-all{
+  font-size: 14px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 10px;
+  color: $primary;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  &:hover{
+    color: $secondary;
+  }
+}

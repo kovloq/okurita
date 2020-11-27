@@ -1,0 +1,379 @@
+.header{
+	&-top{
+		.navbar{
+			background-color: $primary;
+			padding-top: 15px;
+			padding-bottom: 15px;
+			@include device(tablet) {
+				padding: 0;
+			}
+
+			@include device(mobile) {
+				padding: 0;
+			}
+			&-collapse{
+				align-items: center;
+				background-color: $primary;
+				@include device(tablet) {
+					padding: 15px;
+				}
+
+				@include device(mobile) {
+					padding: 15px;
+				}
+			}
+			&-nav{
+				.nav-item{
+					margin-right: 30px;
+					@include device(tablet) {
+						margin-right: 0;
+						margin-bottom: 15px;
+					}
+
+					@include device(mobile) {
+						margin-right: 0px;
+						margin-bottom: 15px;
+					}
+
+					.nav-link{
+						color: $white;
+						padding: 0;
+						position: relative;
+						font-size: 14px;
+						font-weight: 700;
+						text-transform: uppercase;
+						letter-spacing: 1px;
+
+						@include device(mobile) {
+							margin-top: 15px;
+							text-align: center;
+						}
+
+						&:hover, &.active{
+							color: $secondary;
+						}
+					}
+
+					&:last-child{
+						margin-right: 0;
+
+						@include device(tablet) {
+							margin-right: 0;
+							margin-bottom: 0;
+						}
+
+						@include device(mobile) {
+							margin-right: 0px;
+							margin-bottom: 0;
+						}
+					}
+
+					&.active{
+						.nav-link{
+							color: $secondary;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&-bottom{
+		.navbar{
+			z-index: 1045;
+			background-color: $white;
+			box-shadow: none;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			width: 100%;
+			border-bottom: 1px solid transparent;
+			transition: all 0.3s ease-in-out;
+
+			.container{
+				align-items: flex-start;
+				@include device(tablet) {
+					align-items: center;
+				}
+
+				@include device(mobile) {
+					align-items: center;
+				}
+			}
+
+			@include device(tablet) {
+				padding-top: 15px;
+				padding-bottom: 15px;
+			}
+
+			@include device(mobile) {
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+
+			.navbar-toggler{
+				color: $black;
+				padding: 0;
+				box-shadow: none !important;
+
+				&:hover, &:focus, &:active{
+					box-shadow: none !important;
+				}
+			}
+
+			.navbar-brand{
+				padding: 0;
+				@include device(tablet) {
+					padding-left: 15px;
+				}
+
+				@include device(mobile) {
+					padding-left: 15px;
+				}
+				img{
+					width: auto;
+					height: 70px;
+					transition: all 0.3s ease-in-out;
+
+					@include device(tablet) {
+						height: 50px;
+					}
+
+					@include device(mobile) {
+						height: 30px;
+					}
+				}
+
+			}
+
+			.navbar-collapse{
+				align-items: center;
+				@include device(tablet) {
+					background-color: $white;
+				}
+
+				@include device(mobile) {
+					background-color: $white;
+				}
+			}
+
+			form{
+				width: 100%;
+				padding: 0 25px;
+				margin-top: 12px;
+
+				@include device(tablet) {
+					margin-top: 10px;
+					padding: 0;
+				}
+
+				@include device(mobile) {
+					margin-top: 10px;
+					padding: 0;
+				}
+			}
+
+			.navbar-search{
+				display: flex;
+				position: relative;
+
+				.btn{
+					height: 45px;
+				}
+
+				.form{
+					&-control{
+						padding-left: 40px;
+						padding-right: 40px;
+						margin-left: -20px;
+						flex: 1 1 auto;
+						background-color: #f1f1f1;
+						border-color: #f1f1f1;
+						font-size: 16px;
+						border-radius: 10px;
+
+					}
+
+					&-select{
+						width: auto;
+						height: auto;
+						min-width: 125px;
+						border-radius: 10px;
+						font-size: 14px;
+						font-weight: 700;
+						background-color: $primary;
+						border-color: $primary;
+						z-index: 2;
+						color: $white;
+						text-transform: uppercase;
+						letter-spacing: 1px;
+						background-image: url('../img/icons/caret-down-white.png');
+						background-size: 9px 5px;
+						padding-left: 15px;
+					}
+				}
+
+
+				.btn-search{
+					position: absolute;
+					right: 0;
+					top: 50%;
+					transform: translateY(-50%);
+					font-size: 14px;
+					color: rgba(#464646, 0.4);
+				}
+			}
+
+			.marketplace{
+				margin-top: 20px;
+				width: 90%;
+				@include device(tablet) {
+					width: 100%;
+				}
+
+				@include device(mobile) {
+					width: 100%;
+				}
+				&__item{
+					text-align: center;
+					img{
+						max-width: 100%;
+						height: auto;
+					}
+				}
+			}
+
+			.navbar-nav{
+				align-items: center;
+				@include device(tablet) {
+					flex-direction: row;
+				}
+				@include device(mobile) {
+					flex-direction: row;
+				}
+				.nav-item{
+					margin-right: 25px;
+					@include device(tablet) {
+						margin-right: 20px;
+					}
+
+					@include device(mobile) {
+						margin-right: 15px;
+					}
+
+					.nav-link{
+						color: $secondary;
+						position: relative;
+						font-size: 18px;
+						padding: 0;
+
+						.pulse{
+							position: absolute;
+							top: 0;
+							right: -5px;
+						}
+
+						&:hover, &.active{
+							color: $primary;
+						}
+					}
+
+					&:last-child{
+						margin-right: 0;
+					}
+
+					&:nth-last-child(2){
+						margin-right: 0;
+					}
+
+					&.active{
+						.nav-link{
+							color: $primary;
+						}
+					}
+
+					&--cta{
+						display: flex;
+
+						.btn{
+							border-radius: 13px;
+							padding: 5px 10px;
+							font-size: 14px;
+							position: relative;
+
+							&:first-child{
+								z-index: 1;
+							}
+
+							&-primary{
+								font-weight: 700;
+							}
+
+							+ .btn{
+								padding-right: 10px;
+								padding-left: 20px;
+								margin-left: -10px;
+								border-top-left-radius: 0;
+								border-bottom-left-radius: 0;
+							}
+						}
+					}
+				}
+
+				&--main{
+					width: 35%;
+					justify-content: flex-end;
+					padding-top: 20px;
+
+					@include device(tablet) {
+						width: auto;
+						padding-top: 0
+					}
+
+					@include device(mobile) {
+						width: auto;
+						padding-top: 0
+					}
+				}
+			}
+		}
+	}
+
+	.navbar{
+		.container{
+			@include device(tablet) {
+				position: unset;
+			}
+
+			@include device(mobile) {
+				position: unset;
+				flex-wrap: nowrap;
+			}
+		}
+		&-collapse{
+			@include device(tablet) {
+				position: absolute;
+				width: 100%;
+				top: 80px;
+				left: 0;
+				padding: 15px;
+
+			}
+
+			@include device(mobile) {
+				position: absolute;
+				width: 100%;
+				top: 50px;
+				left: 0;
+				padding: 15px;
+
+			}
+		}
+	}
+}
+
+.dropdown{
+	&-menu{
+		border-radius: 10px;
+		border-color: #f1f1f1;
+	}
+}

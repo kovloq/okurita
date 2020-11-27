@@ -1,0 +1,42 @@
+.policy{
+  $policy: &;
+  &-title{
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  &-subtitle{
+    font-size: 16px;
+    line-height: 34px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-weight: 700;
+  }
+
+  p{
+    font-size: 16px;
+    line-height: 34px;
+    margin-bottom: 15px;
+
+    + .policy-subtitle{
+      margin-top: 40px;
+    }
+  }
+
+  .card{
+    padding: 45px 30px;
+    @include device(mobile){
+      padding: 30px 20px;
+    }
+    .card-body{
+      position: relative;
+      max-height: 100vh;
+      padding-right: 10px;
+
+      @include device(tablet){
+        max-height: 60vh;
+      }
+    }
+  }
+}
