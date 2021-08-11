@@ -84,7 +84,6 @@ Country.create([
 { name: 'Ghana',label: 'GH' ,ems_area: 4,parcel_area: 4},
 { name: 'Gibraltar',label: 'GI' ems_area: 3,parcel_area: 3},
 { name: 'Greece',label: 'GR' ,ems_area: 2,parcel_area: 3},
-{ name: 'Greenland',label: 'GL' },
 { name: 'Grenada',label: 'GD' ,ems_area: 2,parcel_area: 3},
 { name: 'Guadeloupe',label: 'GP' ,ems_area: 2,parcel_area: 3},
 { name: 'Guam',label: 'GU',ems_area: 1,parcel_area: 1 },
